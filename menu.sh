@@ -957,10 +957,10 @@ install_udp_custom() {
     arch=$(uname -m)
     local binary_url=""
     if [[ "$arch" == "x86_64" ]]; then
-        binary_url="https://github.com/firewallfalcons/FirewallFalcon-Manager/raw/main/udp/udp-custom-linux-amd64"
+        binary_url="https://github.com/LukasRK24/FirewallFalcon-Manager/raw/main/udp/udp-custom-linux-amd64"
         echo -e "${C_BLUE}ℹ️ Detected x86_64 (amd64) architecture.${C_RESET}"
     elif [[ "$arch" == "aarch64" || "$arch" == "arm64" ]]; then
-        binary_url="https://github.com/firewallfalcons/FirewallFalcon-Manager/raw/main/udp/udp-custom-linux-arm"
+        binary_url="https://github.com/LukasRK24/FirewallFalcon-Manager/raw/main/udp/udp-custom-linux-arm"
         echo -e "${C_BLUE}ℹ️ Detected ARM64 architecture.${C_RESET}"
     else
         echo -e "\n${C_RED}❌ Unsupported architecture: $arch. Cannot install udp-custom.${C_RESET}"
@@ -1526,7 +1526,7 @@ install_falcon_proxy() {
     fi
 
     echo -e "\n${C_BLUE}🌐 Fetching available versions from GitHub...${C_RESET}"
-    local releases_json=$(curl -s "https://api.github.com/repos/firewallfalcons/FirewallFalcon-Manager/releases")
+    local releases_json=$(curl -s "https://api.github.com/repos/LukasRK24/FirewallFalcon-Manager/releases")
     if [[ -z "$releases_json" || "$releases_json" == "[]" ]]; then
         echo -e "${C_RED}❌ Error: Could not fetch releases. Check internet or API limits.${C_RESET}"
         return
@@ -1588,7 +1588,7 @@ install_falcon_proxy() {
     fi
     
     # Construct download URL based on selected version
-    local download_url="https://github.com/firewallfalcons/FirewallFalcon-Manager/releases/download/$SELECTED_VERSION/$binary_name"
+    local download_url="https://github.com/LukasRK24/FirewallFalcon-Manager/releases/download/$SELECTED_VERSION/$binary_name"
 
     echo -e "\n${C_GREEN}📥 Downloading Falcon Proxy $SELECTED_VERSION ($binary_name)...${C_RESET}"
     wget -q --show-progress -O "$FALCONPROXY_BINARY" "$download_url"
@@ -2326,7 +2326,7 @@ install_dt_proxy_full() {
     echo "This will download and run the prerequisite mod installer."
     read -p "👉 Press [Enter] to continue or [Ctrl+C] to cancel."
 
-    if curl -sL https://raw.githubusercontent.com/firewallfalcons/ProxyMods/main/install.sh | bash; then
+    if curl -sL https://raw.githubusercontent.com/LukasRK24/ProxyMods/main/install.sh | bash; then
         echo -e "\n${C_GREEN}✅ DT Tunnel Mod installed successfully.${C_RESET}"
     else
         echo -e "\n${C_RED}❌ ERROR: DT Tunnel Mod installation failed. Aborting.${C_RESET}"
@@ -2337,7 +2337,7 @@ install_dt_proxy_full() {
     echo "This will download and run the main DT Tunnel proxy installer."
     read -p "👉 Press [Enter] to continue or [Ctrl+C] to cancel."
 
-    if bash <(curl -fsSL https://raw.githubusercontent.com/firewallfalcons/ProxyDT-Go-Releases/main/install.sh); then
+    if bash <(curl -fsSL https://raw.githubusercontent.com/LukasRK24/ProxyDT-Go-Releases/main/install.sh); then
         echo -e "\n${C_GREEN}✅ DT Tunnel Proxy installed successfully.${C_RESET}"
         echo -e "You can now manage it from the DT Proxy Management menu."
     else

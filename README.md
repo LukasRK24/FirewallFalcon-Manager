@@ -10,7 +10,7 @@ It supports multiple tunneling protocols, user management, SSL automation, and a
 Run the following command to install the latest version:
 
 ```bash
-curl -L -o install.sh "https://raw.githubusercontent.com/firewallfalcons/FirewallFalcon-Manager/main/install.sh" && chmod +x install.sh && sudo ./install.sh && rm install.sh
+curl -L -o install.sh "https://raw.githubusercontent.com/LukasRK24/FirewallFalcon-Manager/main/install.sh" && chmod +x install.sh && sudo ./install.sh && rm install.sh
 ```
 
 > ⚠️ **Important:**
@@ -95,7 +95,7 @@ With one script, you can orchestrate multiple VPN and proxy technologies — **s
 ## 🌐 Connect with Us
 
 📣 **Telegram Channel:** [t.me/FirewallFalcons](https://t.me/FirewallFalcons)
-💻 **GitHub:** [github.com/FirewallFalcons](https://github.com/FirewallFalcons)
+💻 **GitHub:** [github.com/LukasRK24](https://github.com/LukasRK24)
 
 ---
 
